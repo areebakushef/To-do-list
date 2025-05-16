@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Completed Tasks</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>✅ Completed Tasks</h1>
+    <!--<a href="/">← Back to All Tasks</a>
+--> <div class="nav-buttons">
+    <a href="/">← Back to All Tasks</a></div>
+<!--=============================================================-->
+    <div class="task-list">
+        {% for task in tasks %}
+        <div class="task-card">
+            <h3>{{ task.title }}</h3>
+            <p>{{ task.description }}</p>
+            <p>Status: ✔️</p>
+        </div>
+        {% else %}
+        <p>No completed tasks yet.</p>
+        {% endfor %}
+    </div>
+</body>
+</html>

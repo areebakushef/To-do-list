@@ -1,0 +1,9 @@
+[
+    {
+        "id": 9,
+        "title": "Project",
+        "description": "To-Do-list using FastAPI",
+        "due_date": "2025-06-02",
+        "completed": false
+    }
+]

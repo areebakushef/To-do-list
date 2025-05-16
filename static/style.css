@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
+/* Global styling */
+body {
+    font-family: 'Handlee', cursive;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 1em;
+    background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+}
+
+/* Page title */
+h1 {
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    margin-bottom: 20px;
+}
+
+/* Navigation links as buttons */
+.nav-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.nav-buttons a {
+    display: inline-block;
+    background-color: #ffffffcc;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: 'Handlee', cursive;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-buttons a:hover {
+    background-color: #ffeb3b;
+    transform: scale(1.05);
+}
+
+/* Form */
+form {
+    background: #ffffffdd;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Placeholder styling */
+input::placeholder {
+    font-family: 'Handlee', cursive;
+    font-size: 16px;
+    color: #999;
+}
+
+/* Input fields */
+form input[type="text"],
+form input[type="checkbox"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* General button style */
+form button,
+.task-card button {
+    font-family: 'Handlee', cursive;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: box-shadow 0.3s, transform 0.2s;
+}
+
+/* Glow effects by button role */
+form button[type="submit"] {
+    background-color: #4CAF50; /* Add Task */
+    color: white;
+}
+
+form button[type="submit"]:hover {
+    box-shadow: 0 0 10px #4CAF50;
+    transform: scale(1.05);
+}
+
+/* Task buttons */
+.task-card button:first-child {
+    background-color: #007bff; /* Edit */
+    color: white;
+}
+
+.task-card button:first-child:hover {
+    box-shadow: 0 0 10px #007bff;
+    transform: scale(1.05);
+}
+
+.task-card button:nth-child(2) {
+    background-color: #f44336; /* Delete */
+    color: white;
+}
+
+.task-card button:nth-child(2):hover {
+    box-shadow: 0 0 10px #f44336;
+    transform: scale(1.05);
+}
+
+.task-card button:nth-child(3) {
+    background-color: #ffc107; /* Mark as complete */
+    color: white;
+}
+
+.task-card button:nth-child(3):hover {
+    box-shadow: 0 0 10px #ffc107;
+    transform: scale(1.05);
+}
+
+/* Task list container */
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Task card */
+.task-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.task-card button {
+    font-family: 'Handlee', cursive;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 5px 5px 0 0;
+    transition: box-shadow 0.3s, transform 0.2s;
+}
+
+/* 🔵 Edit Button */
+.task-card button.edit {
+    background-color: #007bff;
+    color: white;
+}
+
+.task-card button.edit:hover {
+    box-shadow: 0 0 10px #007bff;
+    transform: scale(1.05);
+}
+
+/* ❌ Delete Button */
+.task-card button.delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.task-card button.delete:hover {
+    box-shadow: 0 0 10px #f44336;
+    transform: scale(1.05);
+}
+
+/* 🟡 Mark as Complete Button */
+.task-card button.mark-complete {
+    background-color: #ffc107;
+    color: white;
+}
+
+.task-card button.mark-complete:hover {
+    box-shadow: 0 0 10px #ffc107;
+    transform: scale(1.05);
+}
+
+.flash-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.flash-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+    transition: opacity 0.5s ease-out;
+}
+/*--------------------------------------------*/
+body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+body.dark-mode .task-card {
+    background-color: #1e1e1e;
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode input, 
+body.dark-mode button {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+#themeToggle {
+    margin-bottom: 1em;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
