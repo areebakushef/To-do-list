@@ -14,7 +14,7 @@ app.add_middleware(SessionMiddleware, secret_key="Add_your_own_secret_key_here")
 templates = Jinja2Templates(directory="templates")
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
-# Task model with due date
+
 class Task(BaseModel):
     id: int
     title: str
